@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AdventureRPG_Classes;
+using AdventureRPG_Classes.ViewModels;
+using AdventureRPG;
 
 namespace AdventureRPG
 {
@@ -20,9 +23,12 @@ namespace AdventureRPG
     /// </summary>
     public partial class MainWindow : Window
     {
+        private GameSession _gameSession;
         public MainWindow()
         {
             InitializeComponent();
+            _gameSession = new GameSession();
+            DataContext = _gameSession;
         }
     }
 }

@@ -7,13 +7,18 @@ using AdventureRPG_Classes;
 
 namespace AdventureRPG_Classes.ViewModels
 {
-    class GameSession
+    public class GameSession
     {
-        Player CurrentPlayer { get; set; }
+        public Player CurrentPlayer { get; set; }
         public GameSession()
         {
             CurrentPlayer = new Player();
             CurrentPlayer.Name = "Dylan";
+            CurrentPlayer.ExperiencePoints = 0;
+            CurrentPlayer.Gold = 10;
+            CurrentPlayer.Level = 1;
+            CurrentPlayer.CharacterClass = "Fighter";
+            CurrentPlayer.HitPoints = 20;
         }
     }
 }
