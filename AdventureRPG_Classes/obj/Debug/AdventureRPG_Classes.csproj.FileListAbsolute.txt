@@ -1,0 +1,6 @@
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG_Classes\bin\Debug\AdventureRPG_Classes.dll
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG_Classes\bin\Debug\AdventureRPG_Classes.pdb
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG_Classes\obj\Debug\AdventureRPG_Classes.csprojAssemblyReference.cache
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG_Classes\obj\Debug\AdventureRPG_Classes.csproj.CoreCompileInputs.cache
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG_Classes\obj\Debug\AdventureRPG_Classes.dll
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG_Classes\obj\Debug\AdventureRPG_Classes.pdb
