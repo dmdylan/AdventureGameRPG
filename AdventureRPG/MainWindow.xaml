@@ -61,10 +61,24 @@
         <Grid Grid.Row="2" Grid.Column="0" Background="BurlyWood">
             <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="BurlyWood"/>
             <TabControl TabStripPlacement="Top" Margin="0,0,0,0">
-                <TabItem Name="tabItemInventory" Header="Inventory"/>
-                <TabItem Header="Some other Tab"/>
+                <TabItem Name="tabItemInventory" Header="Inventory">
+                    <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid.Columns>
+                            <!--The quantity of an item still needs to be updated here-->
+                            <DataGridTextColumn Header="#" Binding="{Binding Name}" Width="Auto"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Name="tabItemEquipment" Header="Equipment">
+                    <DataGrid>
+
+                    </DataGrid>
+                </TabItem>
+
             </TabControl>
-            
+                
         </Grid>
         
         <Label Grid.Row="1" Grid.Column="1" Content="Game Data" Background="Beige"/>

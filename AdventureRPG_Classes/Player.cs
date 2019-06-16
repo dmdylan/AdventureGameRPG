@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace AdventureRPG_Classes
             {
                 _name = value;
                 OnPropertyChanged("Name");
-            }  
+            }
         }
         public string CharacterClass
         {
@@ -81,6 +82,10 @@ namespace AdventureRPG_Classes
                 OnPropertyChanged("Armor");
             }
         }
+
+        public ObservableCollection<Item> Inventory { get; set; }
+
+        public Player() => Inventory = new ObservableCollection<Item>();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
