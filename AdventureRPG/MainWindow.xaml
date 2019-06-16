@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdventureRPG"
         mc:Ignorable="d"
-        Title="AdventureRPG" Height="450" Width="800">
+        Title="AdventureRPG" Height="475" Width="650">
     <Grid>
+        <!--The base rows and columns of the UI window-->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -19,7 +20,8 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" Background="AliceBlue"/>
-
+        
+        <!--Everything regarding the player information part of the UI-->
         <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -28,30 +30,46 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-
+            
+            <!--Labels for various information about the player character. Binding to the values within the datacontext to update the
+            player information throughout the game-->
             <Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
             <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}"/>
             <Label Grid.Row="1" Grid.Column="0" Content="Class:"/>
             <Label Grid.Row="1" Grid.Column="1" Content="{Binding CurrentPlayer.CharacterClass}"/>
-            <Label Grid.Row="2" Grid.Column="0" Content="Hit points:"/>
-            <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.HitPoints}"/>
-            <Label Grid.Row="3" Grid.Column="0" Content="Gold:"/>
-            <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"/>
-            <Label Grid.Row="4" Grid.Column="0" Content="XP:"/>
-            <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.ExperiencePoints}"/>
-            <Label Grid.Row="5" Grid.Column="0" Content="Level:"/>
-            <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Level:"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Hit points:"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.HitPoints}"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Armor:"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.Armor}"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="Gold:"/>
+            <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"/>
+            <Label Grid.Row="6" Grid.Column="0" Content="XP:"/>
+            <Label Grid.Row="6" Grid.Column="1" Content="{Binding CurrentPlayer.ExperiencePoints}"/>
+
+
         </Grid>
 
+        <!-- Everything for the Inventory and possibly quest section of the UI--> 
+        <Grid Grid.Row="2" Grid.Column="0" Background="BurlyWood">
+            <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="BurlyWood"/>
+            <TabControl TabStripPlacement="Top" Margin="0,0,0,0">
+                <TabItem Name="tabItemInventory" Header="Inventory"/>
+                <TabItem Header="Some other Tab"/>
+            </TabControl>
+            
+        </Grid>
+        
         <Label Grid.Row="1" Grid.Column="1" Content="Game Data" Background="Beige"/>
-        <Label Grid.Row="2" Grid.Column="0" Content="Inventory/Quests" Background="BurlyWood"/>
         <Label Grid.Row="2" Grid.Column="1" Content="Combat/Movement Controls" Background="Lavender"/>
 
     </Grid>
+    
 </Window>

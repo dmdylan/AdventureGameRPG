@@ -19,6 +19,7 @@ namespace AdventureRPG_Classes.ViewModels
             CurrentPlayer.Level = 1;
             CurrentPlayer.CharacterClass = "Fighter";
             CurrentPlayer.HitPoints = 20;
+            CurrentPlayer.Armor = 0;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace AdventureRPG_Classes
         private int _experiencePoints;
         private int _level;
         private int _gold;
+        private int _armor;
 
         public string Name
         {
@@ -71,8 +72,15 @@ namespace AdventureRPG_Classes
                 OnPropertyChanged("Gold");
             }
         }
-
-
+        public int Armor
+        {
+            get { return _armor; }
+            set
+            {
+                _armor = value;
+                OnPropertyChanged("Armor");
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
