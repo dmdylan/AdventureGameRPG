@@ -16,3 +16,5 @@ C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG\
 C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG\obj\Debug\AdventureRPGWindow.csproj.CopyComplete
 C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG\obj\Debug\AdventureRPG.exe
 C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG\obj\Debug\AdventureRPG.pdb
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG\obj\Debug\Menu.g.cs
+C:\Users\Dylan Danowski\source\repos\AdventureRPG\AdventureGameRPG\AdventureRPG\obj\Debug\Menu.baml
