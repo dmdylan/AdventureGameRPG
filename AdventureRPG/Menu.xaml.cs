@@ -24,10 +24,13 @@ namespace AdventureRPG
             InitializeComponent();
         }
 
+        public new bool IsVisible { get; }
+
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-           // main.Visibility = Visibility.Visible;
         }
+
+        
     }
 }

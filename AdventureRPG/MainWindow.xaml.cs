@@ -24,23 +24,29 @@ namespace AdventureRPG
     public partial class MainWindow : Window
     {
         private GameSession _gameSession;
+        //Window mainWindow = new MainWindow();
+        
         //public MainWindow main = new MainWindow();
 
         public MainWindow()
         {
             InitializeComponent();
-            LoadTheMenu();
             _gameSession = new GameSession();
-            DataContext = _gameSession;   
+            DataContext = _gameSession;
+            LoadTheMenu();   
         }
 
         public void LoadTheMenu()
         {
+            
             Menu menu = new Menu();
-            menu.Show();
-            this.Visibility = Visibility.Hidden;
+            menu.Visibility = Visibility.Visible;
+            if(menu.IsVisible)
+            {
+                this.Visibility = Visibility.Hidden;
+            }
+            
         }
-
         //make new method that takes a notification of window closing and reopens the mainwindow
     }
 }
