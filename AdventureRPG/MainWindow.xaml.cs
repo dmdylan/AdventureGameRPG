@@ -25,28 +25,43 @@ namespace AdventureRPG
     {
         private GameSession _gameSession;
         //Window mainWindow = new MainWindow();
-        
-        //public MainWindow main = new MainWindow();
 
+        //public MainWindow main = new MainWindow();
+        
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             _gameSession = new GameSession();
             DataContext = _gameSession;
-            LoadTheMenu();   
+            
+
         }
 
         public void LoadTheMenu()
         {
-            
+        }
+
+        private void SaveGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LoadGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NewGame_Click(object sender, RoutedEventArgs e)
+        {
             Menu menu = new Menu();
             menu.Visibility = Visibility.Visible;
-            if(menu.IsVisible)
-            {
-                this.Visibility = Visibility.Hidden;
-            }
-            
+            //NewGamePopup.IsOpen = true;
+            //Menu menu = new Menu();
+            //menu.Visibility = Visibility.Visible;
         }
+
+
         //make new method that takes a notification of window closing and reopens the mainwindow
     }
 }

@@ -1,4 +1,4 @@
-﻿<Window x:Class="AdventureRPG.MainWindow"
+﻿<Window x:Class="AdventureRPG.MainWindow"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,21 +7,22 @@
         Title="AdventureRPG" Height="475" Width="650">
 
 
-
+    
     <Grid>
         <!--The base rows and columns of the UI window-->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="225"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0"/>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <!--Everything regarding the player information part of the UI-->
-        <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine">
+        <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -56,9 +57,8 @@
 
         </Grid>
 
-        <!-- Everything for the Inventory and possibly quest section of the UI-->
-        <Grid Grid.Row="2" Grid.Column="0" Background="BurlyWood">
-            <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="BurlyWood"/>
+        <!-- Everything for the Inventory, equipment, and possibly quest section of the UI-->
+        <Grid Grid.Row="2" Grid.Column="0" Background="BurlyWood" Grid.ColumnSpan="2">
             <TabControl TabStripPlacement="Top" Margin="0,0,0,0">
                 <TabItem Name="tabItemInventory" Header="Inventory">
                     <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" AutoGenerateColumns="False" HeadersVisibility="Column">
@@ -72,20 +72,39 @@
                 </TabItem>
                 <TabItem Name="tabItemEquipment" Header="Equipment">
                     <DataGrid>
-
                     </DataGrid>
                 </TabItem>
-
             </TabControl>
-
         </Grid>
 
-        <Label Grid.Row="1" Grid.Column="1" Content="Game Data" Background="Beige"/>
-        <Label Grid.Row="2" Grid.Column="1" Content="Combat/Movement Controls" Background="Lavender"/>
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="AliceBlue">
-        </Label>
-
-
+        <Grid Grid.Row="1" Grid.Column="2" Background="BurlyWood">
+            <TextBlock Text="Game Data"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2" Background="Lavender">
+            <TextBlock Text="Combat/Movement Controls"/>
+        </Grid>
+        
+        <!--All of the menu stuff-->
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="AliceBlue">
+            <Menu Name="menu1" Width="50"  Height="22" HorizontalAlignment="Left" VerticalAlignment="Top" Background="AliceBlue">
+                <MenuItem Header="Menu" Height="22">
+                    <MenuItem Name="SaveGameMenu" Header="Save Game" Click="SaveGame_Click"/>
+                    <MenuItem Name="LoadGameMenu" Header="Load Game" Click="LoadGame_Click"/>
+                    <MenuItem Name="NewGameMenu" Header="New Game" Click="NewGame_Click"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
+        
+        <!--The new game menu popup
+        <Popup Name ="NewGamePopup" HorizontalAlignment="Center" Placement="Center" VerticalAlignment="Center" Height="200" Width="300">
+            <Border BorderThickness="1" BorderBrush="Black" Background="LightYellow">
+                <TextBox TextAlignment="Left" Width="150" Height="25" VerticalContentAlignment="Center"/>
+            </Border>
+        </Popup>
+        -->
+        <!--
+        <Grid Grid.ColumnSpan="3" Grid.RowSpan="3">
+        </Grid>
+        -->
     </Grid>
-
 </Window>
