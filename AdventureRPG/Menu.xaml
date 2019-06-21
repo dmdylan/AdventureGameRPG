@@ -12,17 +12,17 @@
             <RowDefinition Height="219*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <Button Width="100" Height="30" Content="Start Game" Click="Button_Click" HorizontalAlignment="Center" Margin="147,10,145,10" RenderTransformOrigin="-0.26,-0.767" Grid.Row="1"/>
-        <RadioButton GroupName="Classes" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="104,179,0,10" Height="30" Checked="RadioButton_Checked">
+        <Button Width="100" Height="30" Content="Start Game" Click="StartGameClick" HorizontalAlignment="Center" Margin="147,10,145,10" RenderTransformOrigin="-0.26,-0.767" Grid.Row="1"/>
+        <RadioButton GroupName="Classes" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="104,179,0,10" Height="30" Checked="FighterChecked">
             Fighter
         </RadioButton>
-        <RadioButton GroupName="Classes" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="165,179,0,10" Height="30" Checked="RadioButton_Checked_1">
+        <RadioButton GroupName="Classes" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="165,179,0,10" Height="30" Checked="WizardChecked">
             Wizard
         </RadioButton>
-        <RadioButton GroupName="Classes" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="226,179,100,10" Height="30" Width="66" Checked="RadioButton_Checked_2">
+        <RadioButton GroupName="Classes" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="226,179,100,10" Height="30" Width="66" Checked="RangerChecked">
             Ranger
         </RadioButton>
-        <TextBox HorizontalContentAlignment="Center" Width="150" Height="25" Margin="121,101,121,93" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="CharacterTextBox" HorizontalContentAlignment="Center" Width="150" Height="25" Margin="121,101,121,93" TextChanged="CharacterNamed" Text="{Binding CurrentPlayer.Name, UpdateSourceTrigger=Explicit}"/>
         <TextBlock HorizontalAlignment="Center" FontSize="20" Text="Character Name:" Margin="104,65,100,123" Width="188" TextAlignment="Center"/>
 
 

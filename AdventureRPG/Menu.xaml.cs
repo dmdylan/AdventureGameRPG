@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AdventureRPG_Classes.ViewModels;
+using AdventureRPG_Classes;
 
 namespace AdventureRPG
 {
@@ -25,31 +27,31 @@ namespace AdventureRPG
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
-        public new bool IsVisible { get; }
-
-        public void Button_Click(object sender, RoutedEventArgs e)
+        public void StartGameClick(object sender, RoutedEventArgs e)
         {
             this.Close();
+            
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void FighterChecked(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        private void WizardChecked(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        private void RangerChecked(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void CharacterNamed(object sender, TextChangedEventArgs e)
         {
-
+            BindingExpression bindingExpression = CharacterTextBox.GetBindingExpression(TextBox.TextProperty);
+            bindingExpression.UpdateSource();
         }
     }
 }
