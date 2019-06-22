@@ -23,7 +23,7 @@ namespace AdventureRPG
     /// </summary>
     public partial class MainWindow : Window
     {
-        private GameSession _gameSession;
+        public GameSession _gameSession;
         //Window mainWindow = new MainWindow();
 
         //public MainWindow main = new MainWindow();
@@ -55,10 +55,7 @@ namespace AdventureRPG
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
             Menu menu = new Menu();
-            menu.Visibility = Visibility.Visible;
-            //NewGamePopup.IsOpen = true;
-            //Menu menu = new Menu();
-            //menu.Visibility = Visibility.Visible;
+            menu.Visibility = Visibility.Visible;     
         }
 
 

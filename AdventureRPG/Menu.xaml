@@ -22,7 +22,7 @@
         <RadioButton GroupName="Classes" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="226,179,100,10" Height="30" Width="66" Checked="RangerChecked">
             Ranger
         </RadioButton>
-        <TextBox Name="CharacterTextBox" HorizontalContentAlignment="Center" Width="150" Height="25" Margin="121,101,121,93" TextChanged="CharacterNamed" Text="{Binding CurrentPlayer.Name, UpdateSourceTrigger=Explicit}"/>
+        <TextBox Name="CharacterTextBox" HorizontalContentAlignment="Center" Width="150" Height="25" Margin="121,101,121,93" TextChanged="CharacterNamed"/>
         <TextBlock HorizontalAlignment="Center" FontSize="20" Text="Character Name:" Margin="104,65,100,123" Width="188" TextAlignment="Center"/>
 
 

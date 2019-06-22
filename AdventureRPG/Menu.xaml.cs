@@ -21,6 +21,8 @@ namespace AdventureRPG
     /// </summary>
     public partial class Menu : Window
     {
+        
+
         public Menu()
         {
             InitializeComponent();
